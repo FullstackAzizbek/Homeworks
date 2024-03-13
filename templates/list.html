@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block title %} Pupil {% endblock %} {% comment %}
+{% endcomment %} {% block content %}
+<style>
+  .user_box {
+    max-width: 1400px;
+    padding-top: 60px;
+    margin: auto;
+  }
+  .user_box h4 {
+    font-size: 35px;
+  }
+  .user_box h5 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  th,
+  td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+<div class="user_box">
+  <h4>To'liq ismi: {{user.name}}</h4>
+  <h5>Yo'nalishi: {{user.spec}}</h5>
+  <table>
+    <tr>
+      <th>OY</th>
+      <th>To'plagan bali</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>{{user.result}}</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>{{user.res_2}}</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>{{user.res_3}}</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>{{user.res_4}}</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>{{user.res_5}}</td>
+    </tr>
+  </table>
+  <br />
+  <a href="/pupils">Orqaga qaytish</a>
+</div>
+{% endblock %}

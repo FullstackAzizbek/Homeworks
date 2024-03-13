@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %} Pupils {% endblock %} {% comment %}
+{% endcomment %} {% block content %} {% load static %}
+
+<div class="box_2">
+  <ul>
+    <li>
+      <div class="b">
+        <b>ID</b>
+        <b>FIO</b>
+      </div>
+      <b>Yo'nalishi</b>
+      <b>Imtihon natijasi</b>
+    </li>
+    {% for p in pupils %}
+    <li>
+      <div class="b">
+        <code>{{p.id}}</code>
+        <a href="list/pupils/{{p.id}}">{{p.name}}</a>
+      </div>
+      <h4>{{p.spec}}</h4>
+      <span>{{p.result}}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
